@@ -1,0 +1,199 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+
+    input {
+        text-align: center;
+        width: 50px;
+        height: 30px;
+        line-height: 30px;
+        outline: none;
+        background-color: rgb(117, 116, 116);
+        border: none;
+        color: white;
+    }
+
+    #pdf-viewer {
+        // display: none;
+        visibility: hidden;
+        flex-direction: column;
+        margin: 0 auto;
+        position: relative;
+        width: 100%;
+
+        canvas {
+            display: block;
+            margin: 0 auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #controls {
+            font-size: 14px;
+            z-index: 10;
+            height: 60px;
+            margin-bottom: 60px;
+            width: 100%;
+            text-align: center;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: rgb(60, 60, 60);
+            padding: 10px 0;
+            color: white;
+
+            input {
+                width: 30px;
+            }
+
+            button {
+                padding: 10px 20px;
+                margin: 0 5px;
+                font-size: 16px;
+                cursor: pointer;
+                background-color: rgb(51, 125, 255);
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+            }
+
+            button:hover {
+                // background-color: #0056b3;
+                opacity: .8;
+            }
+        }
+
+        .core {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin-top: 60px;
+            background-color: black;
+
+            .left {
+                margin-top: 60px;
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 300px;
+                height: calc(100vh - 60px);
+                overflow: scroll;
+
+                .nav {
+                    min-height: calc(100vh - 60px);
+                    padding: 10px 0;
+                    background-color: rgb(60, 60, 60);
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+
+                    .nav-item {
+                        margin: 20px 0;
+                        background-color: white;
+                        // border: 4px solid rgb(138, 180, 248);
+                    }
+
+                    .nav-item-anchor {
+                        .nav-item();
+                        border: 4px solid rgb(138, 180, 248);
+                    }
+                }
+            }
+
+            .left-hidden {
+                .left();
+                width: 0px;
+            }
+
+            .main-outer {
+                margin-left: 300px;
+                position: fixed;
+                width: calc(100vw - 300px);
+                height: calc(100vh - 60px);
+                overflow: scroll;
+                background-color: black;
+
+                .main {
+                    position: relative;
+                    height: 100%;
+                    width: 100%;
+
+                    .main-item {
+                        background-color: transparent;
+                        margin-bottom: 10px;
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                    }
+                }
+            }
+
+            .main-outer-hidden {
+                .main-outer();
+                margin-left: 0px;
+                width: 100vw;
+            }
+        }
+    }
+
+    #contatiner {
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .dots-container {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+
+            .dot {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: #3498db;
+                animation: bounce 1.4s infinite ease-in-out;
+
+                &:nth-child(1) {
+                    animation-delay: 0s;
+                }
+
+                &:nth-child(2) {
+                    animation-delay: 0.2s;
+                }
+
+                &:nth-child(3) {
+                    animation-delay: 0.4s;
+                }
+            }
+        }
+    }
+
+
+    /* 弹性动画关键帧 */
+    @keyframes bounce {
+
+        0%,
+        80%,
+        100% {
+            transform: translateY(0);
+            /* 起始和结束位置 */
+        }
+
+        40% {
+            transform: translateY(-20px);
+            /* 跳到最高点 */
+        }
+    }
+}

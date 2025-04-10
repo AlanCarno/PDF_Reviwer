@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF 预览器</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./static/pdf.min.js"></script>
+    <script> pdfjsLib.GlobalWorkerOptions.workerSrc = './static/pdf.worker.min.js'</script>
+</head>
+
+<body>
+    <div id="pdf-viewer">
+        <div id="controls">
+            <span>
+                <input style="background-color: rgb(60, 60, 60);" id="page-num" value="1"></input>
+                /
+                <input style="background-color: rgb(60, 60, 60);" id="page-count" disabled value="1"></input>
+            </span>
+            <button id="amplify">放大</button>
+            <input style="background-color: rgb(60, 60, 60);" id="scale-num" value="500">%</input>
+            <button id="reduce">缩小</button>
+            <button id="rotate">旋转</button>
+            <span id="hide">隐藏</span>
+            <span id="double">双页显示</span>
+        </div>
+        <div class="core">
+            <div class="left">
+                <div class="nav"></div>
+            </div>
+            <div class="main-outer">
+                <div class="main"></div>
+            </div>
+        </div>
+    </div>
+    <div id="contatiner">
+        <div class="dots-container">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>
