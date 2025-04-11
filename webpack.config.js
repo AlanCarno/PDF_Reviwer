@@ -121,6 +121,15 @@ module.exports = (env) => {
                                 debug:true
                             },
                             noErrorOnMissing: true, // 可选：如果static目录不存在不报错
+                        },
+                        {
+                            from: path.resolve(ROOT,PUBLIC,`${env.filename}`,"font"),  // 源目录
+                            to: 'font',    // 输出目录（相对于output.path）
+                            globOptions: {
+                                ignore: [...IGNORE_LIST_COMMON, '**/demo_index.html','**/demo.css'], // 忽略less源文件
+                                debug:true
+                            },
+                            noErrorOnMissing: true, // 可选：如果static目录不存在不报错
                         }
                     ]
                 }),

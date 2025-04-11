@@ -1,0 +1,51 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1369",
+      "name": "缩小",
+      "font_class": "suoxiao",
+      "unicode": "f01b8",
+      "unicode_decimal": 983480
+    },
+    {
+      "icon_id": "1370",
+      "name": "放大",
+      "font_class": "fangda",
+      "unicode": "f01b9",
+      "unicode_decimal": 983481
+    },
+    {
+      "icon_id": "7597976",
+      "name": "24gl-swapHorizontal",
+      "font_class": "24gl-swapHorizontal",
+      "unicode": "eb74",
+      "unicode_decimal": 60276
+    },
+    {
+      "icon_id": "10905172",
+      "name": "旋转",
+      "font_class": "rotate",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "11494555",
+      "name": "隐藏",
+      "font_class": "yincang",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "18211076",
+      "name": "隐藏",
+      "font_class": "yincang1",
+      "unicode": "e7a6",
+      "unicode_decimal": 59302
+    }
+  ]
+}

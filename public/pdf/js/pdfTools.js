@@ -21,7 +21,7 @@ class Tools {
     // 各个元素之间的间距(top)
     interval = 10
     // 双页展示
-    double = true
+    double = false
     // 横向Gap
     intervalHorizontal = 5
 

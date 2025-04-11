@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF 预览器</title>
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./font/iconfont.css">
     <script src="./static/pdf.min.js"></script>
     <script> pdfjsLib.GlobalWorkerOptions.workerSrc = './static/pdf.worker.min.js'</script>
 </head>
@@ -18,12 +19,23 @@
                 /
                 <input style="background-color: rgb(60, 60, 60);" id="page-count" disabled value="1"></input>
             </span>
-            <button id="amplify">放大</button>
+            <button id="amplify">
+                <span class="iconfont">&#xf01b9;</span>
+            </button>
             <input style="background-color: rgb(60, 60, 60);" id="scale-num" value="500">%</input>
-            <button id="reduce">缩小</button>
-            <button id="rotate">旋转</button>
-            <span id="hide">隐藏</span>
-            <span id="double">双页显示</span>
+            <button id="reduce">
+                <span class="iconfont">&#xf01b8;</span>
+            </button>
+            <button id="rotate">
+                <span class="iconfont">&#xe615;</span>
+            </button>
+            <button id="hide">
+                <span class="iconfont" id="show" >&#xe60b;</span>
+                <span class="iconfont" id="unshow" style="display: none;">&#xe7a6;</span>
+            </button>
+            <button id="double">
+                <span class="iconfont">&#xeb74;</span>
+            </button>
         </div>
         <div class="core">
             <div class="left">

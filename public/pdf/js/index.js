@@ -62,6 +62,10 @@ window.onload = () => {
         const main = document.getElementsByClassName("main-outer")[0] ? document.getElementsByClassName("main-outer")[0] : document.getElementsByClassName("main-outer-hidden")[0]
         left.className = document.getElementsByClassName("left")[0] ? "left-hidden" : "left"
         main.className = document.getElementsByClassName("main-outer")[0] ? "main-outer-hidden" : "main-outer"
+        const show=document.getElementById("show")
+        const unshow=document.getElementById("unshow")
+        show.style.display=document.getElementsByClassName("left")[0] ? "":"none"
+        unshow.style.display=document.getElementsByClassName("left")[0] ? "none":""
         staticScale(tools, scaleNnum)
     })
     // 单双页显示
@@ -106,6 +110,7 @@ window.onload = () => {
     })
     // 手动修改页码
     pageNumElement.addEventListener("change", (e) => {
+        const navList = document.getElementsByClassName(NAV_CLASS_NAME)
         const regex = /^[1-9]\d*$/
         if (regex.test(e.target.value)) {
             const v = parseInt(e.target.value)

@@ -28,3 +28,5 @@ yarn-error.log*
 *.sw*
 
 build/env.js
+# ignore test file
+*.pdf
