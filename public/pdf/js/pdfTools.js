@@ -301,8 +301,7 @@ class Tools {
         if (this.rotation % 180) {
             const top = height / 2 - width / 2
             // 若元素的高>宽，top值应反向增加
-            if (top >= 0) return -top
-            else return -top
+            return -top
         } else return 0
     }
     /**
